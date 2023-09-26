@@ -1,0 +1,166 @@
+Date : 2023-09-22 10:35:27
+Directory : c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src
+Total : 92 files,  5669 codes, 210 comments, 627 blanks, all 6506 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Dart     |         92 |      5,669 |        210 |        627 |      6,506 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                              | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                 |         92 |      5,669 |        210 |        627 |      6,506 |
+| common_widgets                                                                                                    |          7 |        251 |          1 |         28 |        280 |
+| common_widgets\authentication                                                                                     |          3 |        137 |          1 |         15 |        153 |
+| common_widgets\buttons                                                                                            |          1 |         21 |          0 |          3 |         24 |
+| common_widgets\decoration                                                                                         |          2 |         48 |          0 |          6 |         54 |
+| common_widgets\tiles                                                                                              |          1 |         45 |          0 |          4 |         49 |
+| constants                                                                                                         |          6 |        260 |         21 |         31 |        312 |
+| features                                                                                                          |         55 |      3,792 |         70 |        386 |      4,248 |
+| features\authentication                                                                                           |         13 |        908 |         55 |        101 |      1,064 |
+| features\authentication\controllers                                                                               |          4 |        173 |         19 |         29 |        221 |
+| features\authentication\screens                                                                                   |          9 |        735 |         36 |         72 |        843 |
+| features\authentication\screens\landing                                                                           |          1 |        135 |          5 |         12 |        152 |
+| features\authentication\screens\login                                                                             |          3 |        221 |          7 |         20 |        248 |
+| features\authentication\screens\mail_verification                                                                 |          1 |         99 |          0 |          6 |        105 |
+| features\authentication\screens\signup                                                                            |          3 |        235 |         24 |         24 |        283 |
+| features\authentication\screens\splash                                                                            |          1 |         45 |          0 |         10 |         55 |
+| features\generators                                                                                               |         16 |      1,231 |         12 |        132 |      1,375 |
+| features\generators\models                                                                                        |          2 |         42 |          6 |          9 |         57 |
+| features\generators\screens                                                                                       |         14 |      1,189 |          6 |        123 |      1,318 |
+| features\generators\screens\chat_generator                                                                        |          5 |        478 |          6 |         52 |        536 |
+| features\generators\screens\image_generator                                                                       |          9 |        711 |          0 |         71 |        782 |
+| features\home                                                                                                     |          9 |        615 |          0 |         58 |        673 |
+| features\home\models                                                                                              |          2 |          8 |          0 |          4 |         12 |
+| features\home\screens                                                                                             |          1 |        115 |          0 |         11 |        126 |
+| features\home\widgets                                                                                             |          6 |        492 |          0 |         43 |        535 |
+| features\menu                                                                                                     |          5 |        303 |          0 |         33 |        336 |
+| features\menu\screens                                                                                             |          1 |        119 |          0 |         14 |        133 |
+| features\menu\widgets                                                                                             |          4 |        184 |          0 |         19 |        203 |
+| features\profile                                                                                                  |          6 |        428 |          1 |         34 |        463 |
+| features\profile\edit_profile                                                                                     |          4 |        267 |          1 |         23 |        291 |
+| features\profile\screens                                                                                          |          1 |        138 |          0 |          8 |        146 |
+| features\profile\widgets                                                                                          |          1 |         23 |          0 |          3 |         26 |
+| features\settings                                                                                                 |          6 |        307 |          2 |         28 |        337 |
+| features\settings\about_us                                                                                        |          2 |         89 |          0 |          8 |         97 |
+| features\settings\appearance                                                                                      |          1 |         72 |          0 |          8 |         80 |
+| features\settings\screens                                                                                         |          2 |        104 |          0 |          9 |        113 |
+| features\settings\widgets                                                                                         |          1 |         42 |          2 |          3 |         47 |
+| providers                                                                                                         |          2 |        106 |         34 |         27 |        167 |
+| repository                                                                                                        |          3 |        251 |         19 |         35 |        305 |
+| repository\authentication_repository                                                                              |          3 |        251 |         19 |         35 |        305 |
+| services                                                                                                          |          5 |        307 |         38 |         56 |        401 |
+| utils                                                                                                             |         14 |        702 |         27 |         64 |        793 |
+| utils (Files)                                                                                                     |          1 |         21 |          0 |          5 |         26 |
+| utils\alert_dialog                                                                                                |          2 |        262 |          0 |          8 |        270 |
+| utils\app_bar                                                                                                     |          1 |        103 |          0 |         10 |        113 |
+| utils\random_id                                                                                                   |          1 |         40 |          0 |          2 |         42 |
+| utils\rive                                                                                                        |          2 |         24 |          0 |          8 |         32 |
+| utils\snack_bar                                                                                                   |          1 |         54 |          3 |          4 |         61 |
+| utils\theme                                                                                                       |          6 |        198 |         24 |         27 |        249 |
+| utils\theme (Files)                                                                                               |          1 |         56 |         15 |         13 |         84 |
+| utils\theme\widget_theme                                                                                          |          5 |        142 |          9 |         14 |        165 |
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                          | language | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\common_widgets\authentication\auth_supplier_button.dart                  | Dart     |         44 |          0 |          4 |         48 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\common_widgets\authentication\auth_text_field.dart                       | Dart     |         64 |          1 |          6 |         71 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\common_widgets\authentication\form_header_widget.dart                    | Dart     |         29 |          0 |          5 |         34 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\common_widgets\buttons\button_loading_widget.dart                        | Dart     |         21 |          0 |          3 |         24 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\common_widgets\decoration\background_full_brainy.dart                    | Dart     |         20 |          0 |          3 |         23 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\common_widgets\decoration\background_logo_brainy.dart                    | Dart     |         28 |          0 |          3 |         31 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\common_widgets\tiles\menu_tiles.dart                                     | Dart     |         45 |          0 |          4 |         49 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\constants\api_constants.dart                                             | Dart     |          2 |          0 |          1 |          3 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\constants\bool_constants.dart                                            | Dart     |         84 |          0 |          2 |         86 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\constants\colors.dart                                                    | Dart     |         17 |          6 |          8 |         31 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\constants\constants.dart                                                 | Dart     |          4 |          0 |          1 |          5 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\constants\string_assets.dart                                             | Dart     |         17 |          5 |          6 |         28 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\constants\string_text.dart                                               | Dart     |        136 |         10 |         13 |        159 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\authentication\controllers\account_controller.dart              | Dart     |         51 |          5 |          7 |         63 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\authentication\controllers\mail_verification_controller.dart    | Dart     |         38 |          4 |          7 |         49 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\authentication\controllers\sign_in_controller.dart              | Dart     |         42 |          5 |          8 |         55 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\authentication\controllers\sign_up_controller.dart              | Dart     |         42 |          5 |          7 |         54 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\authentication\screens\landing\landing_screen.dart              | Dart     |        135 |          5 |         12 |        152 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\authentication\screens\login\login_footer_widget.dart           | Dart     |         71 |          6 |          5 |         82 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\authentication\screens\login\login_form.dart                    | Dart     |        103 |          1 |          7 |        111 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\authentication\screens\login\login_screen.dart                  | Dart     |         47 |          0 |          8 |         55 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\authentication\screens\mail_verification\mail_verification.dart | Dart     |         99 |          0 |          6 |        105 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\authentication\screens\signup\signup_footer_widget.dart         | Dart     |         71 |          5 |          4 |         80 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\authentication\screens\signup\signup_form_widget.dart           | Dart     |        108 |         19 |         11 |        138 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\authentication\screens\signup\signup_screen.dart                | Dart     |         56 |          0 |          9 |         65 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\authentication\screens\splash\splash_screen.dart                | Dart     |         45 |          0 |         10 |         55 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\generators\models\chat_model.dart                               | Dart     |         24 |          6 |          5 |         35 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\generators\models\models_model.dart                             | Dart     |         18 |          0 |          4 |         22 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\generators\screens\chat_generator\chat_screen.dart              | Dart     |        267 |          2 |         24 |        293 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\generators\screens\chat_generator\chat_widget.dart              | Dart     |         72 |          1 |          5 |         78 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\generators\screens\chat_generator\long_press_image.dart         | Dart     |         91 |          2 |         14 |        107 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\generators\screens\chat_generator\memory_switch.dart            | Dart     |         23 |          0 |          6 |         29 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\generators\screens\chat_generator\text_widget.dart              | Dart     |         25 |          1 |          3 |         29 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\generators\screens\image_generator\continue_button.dart         | Dart     |         37 |          0 |          4 |         41 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\generators\screens\image_generator\create_button.dart           | Dart     |         54 |          0 |          6 |         60 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\generators\screens\image_generator\download_button.dart         | Dart     |         83 |          0 |         13 |         96 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\generators\screens\image_generator\full_image.dart              | Dart     |        106 |          0 |         11 |        117 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\generators\screens\image_generator\image_generated.dart         | Dart     |         65 |          0 |          5 |         70 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\generators\screens\image_generator\image_generator_screen.dart  | Dart     |        193 |          0 |         15 |        208 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\generators\screens\image_generator\image_screen.dart            | Dart     |        107 |          0 |          9 |        116 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\generators\screens\image_generator\image_screen_subtitles.dart  | Dart     |         21 |          0 |          4 |         25 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\generators\screens\image_generator\text_field_prompt.dart       | Dart     |         45 |          0 |          4 |         49 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\home\models\list_chat_model.dart                                | Dart     |          4 |          0 |          2 |          6 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\home\models\list_image_model.dart                               | Dart     |          4 |          0 |          2 |          6 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\home\screens\home_screen.dart                                   | Dart     |        115 |          0 |         11 |        126 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\home\widgets\brainy_header.dart                                 | Dart     |         47 |          0 |          7 |         54 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\home\widgets\history_text.dart                                  | Dart     |         35 |          0 |          4 |         39 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\home\widgets\list_chat_history.dart                             | Dart     |        143 |          0 |         11 |        154 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\home\widgets\list_image_history.dart                            | Dart     |        100 |          0 |         10 |        110 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\home\widgets\tiles_chat_history.dart                            | Dart     |         99 |          0 |          5 |        104 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\home\widgets\tiles_image_history.dart                           | Dart     |         68 |          0 |          6 |         74 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\menu\screens\menu_screen.dart                                   | Dart     |        119 |          0 |         14 |        133 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\menu\widgets\info_card.dart                                     | Dart     |         38 |          0 |          4 |         42 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\menu\widgets\menu_button.dart                                   | Dart     |         23 |          0 |          4 |         27 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\menu\widgets\side_menu.dart                                     | Dart     |         64 |          0 |          6 |         70 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\menu\widgets\side_menu_tile.dart                                | Dart     |         59 |          0 |          5 |         64 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\profile\edit_profile\delete_account_button.dart                 | Dart     |        105 |          1 |          9 |        115 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\profile\edit_profile\edit_profile_screen.dart                   | Dart     |         69 |          0 |          5 |         74 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\profile\edit_profile\reset_password_button.dart                 | Dart     |         58 |          0 |          5 |         63 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\profile\edit_profile\text_field_edit_profile.dart               | Dart     |         35 |          0 |          4 |         39 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\profile\screens\profile_screen.dart                             | Dart     |        138 |          0 |          8 |        146 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\profile\widgets\header_profile.dart                             | Dart     |         23 |          0 |          3 |         26 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\settings\about_us\about_me_screen.dart                          | Dart     |         35 |          0 |          5 |         40 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\settings\about_us\about_me_text.dart                            | Dart     |         54 |          0 |          3 |         57 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\settings\appearance\appearance_screen.dart                      | Dart     |         72 |          0 |          8 |         80 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\settings\screens\setting_tiles.dart                             | Dart     |         67 |          0 |          3 |         70 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\settings\screens\settings_screen.dart                           | Dart     |         37 |          0 |          6 |         43 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\features\settings\widgets\search_setting.dart                            | Dart     |         42 |          2 |          3 |         47 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\providers\chats_provider.dart                                            | Dart     |         85 |         30 |         18 |        133 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\providers\models_provider.dart                                           | Dart     |         21 |          4 |          9 |         34 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\repository\authentication_repository\authentication_repository.dart      | Dart     |        194 |         19 |         28 |        241 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\repository\authentication_repository\email_verification_failure.dart     | Dart     |         21 |          0 |          4 |         25 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\repository\authentication_repository\exceptionds.dart                    | Dart     |         36 |          0 |          3 |         39 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\services\api_service.dart                                                | Dart     |        157 |         36 |         25 |        218 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\services\firebase_api.dart                                               | Dart     |         19 |          0 |          4 |         23 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\services\image_controller.dart                                           | Dart     |         75 |          2 |         18 |         95 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\services\local_storage.dart                                              | Dart     |          7 |          0 |          3 |         10 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\services\rive_asset.dart                                                 | Dart     |         49 |          0 |          6 |         55 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\utils\alert_dialog\custom_alert_dialog.dart                              | Dart     |        113 |          0 |          4 |        117 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\utils\alert_dialog\custom_text_field_dialog.dart                         | Dart     |        149 |          0 |          4 |        153 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\utils\app_bar\app_bar.dart                                               | Dart     |        103 |          0 |         10 |        113 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\utils\random_id\random_id.dart                                           | Dart     |         40 |          0 |          2 |         42 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\utils\rive\rive_model.dart                                               | Dart     |         14 |          0 |          4 |         18 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\utils\rive\rive_utils.dart                                               | Dart     |         10 |          0 |          4 |         14 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\utils\snack_bar\snack_bars.dart                                          | Dart     |         54 |          3 |          4 |         61 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\utils\theme\theme.dart                                                   | Dart     |         56 |         15 |         13 |         84 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\utils\theme\widget_theme\app_bar_theme.dart                              | Dart     |         16 |          2 |          4 |         22 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\utils\theme\widget_theme\dialog_theme.dart                               | Dart     |          0 |          1 |          0 |          1 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\utils\theme\widget_theme\elevated_button_theme.dart                      | Dart     |         40 |          2 |          4 |         46 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\utils\theme\widget_theme\text_field_theme.dart                           | Dart     |         10 |          2 |          3 |         15 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\utils\theme\widget_theme\text_theme.dart                                 | Dart     |         76 |          2 |          3 |         81 |
+| c:\YAGO\TFG\Flutter\tfg_v7 - fav\lib\src\utils\utils.dart                                                         | Dart     |         21 |          0 |          5 |         26 |
+| Total                                                                                                             |          |      5,669 |        210 |        627 |      6,506 |
++-------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
