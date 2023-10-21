@@ -12,7 +12,6 @@ import 'package:tfg_v3/src/providers/models_provider.dart';
 import 'package:tfg_v3/src/services/local_storage.dart';
 import 'package:tfg_v3/src/utils/theme/theme.dart';
 
-// TODO: canviar per mantenir dark o light theme (amb shared_preferences)
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await LocalStorage.configurePrefs();

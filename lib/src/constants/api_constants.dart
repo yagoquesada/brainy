@@ -1,2 +1,2 @@
 const String baseUrl = "https://api.openai.com/v1";
-const String apiKey = "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";
+const String apiKey = "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";

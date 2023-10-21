@@ -25,14 +25,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.13.0"
-  animated_text_kit:
-    dependency: "direct main"
-    description:
-      name: animated_text_kit
-      sha256: "37392a5376c9a1a503b02463c38bc0342ef814ddbb8f9977bc90f2a84b22fa92"
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.2.2"
   archive:
     dependency: transitive
     description:
@@ -161,16 +153,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.3"
-  dbus:
-    dependency: transitive
-    description:
-      name: dbus
-      sha256: "6f07cba3f7b3448d42d015bfd3d53fe12e5b36da2423f23838efc1d5fb31a263"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.7.8"
   dependency_validator:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: dependency_validator
       sha256: "08349175533ed0bd06eb9b6043cde66c45b2bfc7ebc222a7542cdb1324f1bf03"
@@ -294,14 +278,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_file_downloader:
-    dependency: "direct main"
-    description:
-      name: flutter_file_downloader
-      sha256: "1374c31dcbd9df0324439cbc8877c6a9d5fc3eac80196493f22b25342dffb44c"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.4"
   flutter_launcher_icons:
     dependency: "direct dev"
     description:
@@ -318,30 +294,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.3"
-  flutter_local_notifications:
-    dependency: "direct main"
-    description:
-      name: flutter_local_notifications
-      sha256: "3002092e5b8ce2f86c3361422e52e6db6776c23ee21e0b2f71b892bf4259ef04"
-      url: "https://pub.dev"
-    source: hosted
-    version: "15.1.1"
-  flutter_local_notifications_linux:
-    dependency: transitive
-    description:
-      name: flutter_local_notifications_linux
-      sha256: "33f741ef47b5f63cc7f78fe75eeeac7e19f171ff3c3df054d84c1e38bedb6a03"
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.0.0+1"
-  flutter_local_notifications_platform_interface:
-    dependency: transitive
-    description:
-      name: flutter_local_notifications_platform_interface
-      sha256: "7cf643d6d5022f3baed0be777b0662cce5919c0a7b86e700299f22dc4ae660ef"
-      url: "https://pub.dev"
-    source: hosted
-    version: "7.0.0+1"
   flutter_spinkit:
     dependency: "direct main"
     description:
@@ -472,14 +424,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.1.2"
-  image_downloader:
-    dependency: "direct main"
-    description:
-      name: image_downloader
-      sha256: "2b1c1d1fcfb6677175d009af3fc86914aee07684c12ea061f380ef1f44cae8df"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.31.0"
   intl:
     dependency: transitive
     description:
@@ -821,14 +765,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.0"
-  timezone:
-    dependency: transitive
-    description:
-      name: timezone
-      sha256: "1cfd8ddc2d1cfd836bc93e67b9be88c3adaeca6f40a00ca999104c30693cdca0"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.9.2"
   typed_data:
     dependency: transitive
     description:

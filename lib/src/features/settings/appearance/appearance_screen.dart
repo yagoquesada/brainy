@@ -26,6 +26,8 @@ class _AppearanceScreenState extends State<AppearanceScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var height = MediaQuery.of(context).size.height;
+
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
         systemNavigationBarColor: Colors.transparent,
@@ -40,11 +42,11 @@ class _AppearanceScreenState extends State<AppearanceScreen> {
         closeButton: true,
         isChat: false,
       ),
-      body: getBody(),
+      body: getBody(height: height),
     );
   }
 
-  PageView getBody() {
+  PageView getBody({required double height}) {
     return PageView.builder(
         itemCount: text.length,
         pageSnapping: true,
@@ -60,6 +62,7 @@ class _AppearanceScreenState extends State<AppearanceScreen> {
           return Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              addVerticalSpace(20),
               Text(
                 text[pagePosition],
                 style: pagePosition == 2
@@ -70,7 +73,12 @@ class _AppearanceScreenState extends State<AppearanceScreen> {
               addVerticalSpace(20),
               Container(
                 margin: const EdgeInsets.all(10),
-                child: pagePosition == 2 ? const SizedBox.shrink() : Image.asset(images[pagePosition]),
+                child: pagePosition == 2
+                    ? const SizedBox.shrink()
+                    : Image.asset(
+                        images[pagePosition],
+                        height: height * 0.75,
+                      ),
               ),
             ],
           );

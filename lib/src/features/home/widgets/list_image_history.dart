@@ -9,6 +9,8 @@ import 'package:tfg_v3/src/features/generators/screens/image_generator/image_gen
 import 'package:tfg_v3/src/features/home/widgets/tiles_image_history.dart';
 import 'package:tfg_v3/src/utils/utils.dart';
 
+import '../../../utils/alert_dialog/custom_alert_dialog.dart';
+
 class ListImageHistory extends StatefulWidget {
   const ListImageHistory({
     Key? key,
@@ -93,12 +95,36 @@ class _ListImageHistoryState extends State<ListImageHistory> {
                       final String url = image['url'];
 
                       return TilesImageHistory(
-                        url: url,
-                        onPress: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => FullImage(url: url)),
-                        ),
-                      );
+                          url: url,
+                          onPress: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => FullImage(url: url)),
+                              ),
+                          onLongPress: () {
+                            showDialog(
+                              context: context,
+                              builder: (context) => CustomAlertDialog(
+                                title: "Delete",
+                                text: "Are you sure you want to delete this image?",
+                                icon: Icons.delete_outlined,
+                                onPress: () {
+                                  Navigator.pop(context);
+                                  final collection = FirebaseFirestore.instance.collection('users');
+                                  final user = FirebaseAuth.instance.currentUser!;
+                                  collection
+                                      .doc(user.uid)
+                                      .collection('images')
+                                      .where("url", isEqualTo: url)
+                                      .get()
+                                      .then((snapshot) {
+                                    for (DocumentSnapshot ds in snapshot.docs) {
+                                      ds.reference.delete();
+                                    }
+                                  });
+                                },
+                              ),
+                            );
+                          });
                     },
                   ),
                 );

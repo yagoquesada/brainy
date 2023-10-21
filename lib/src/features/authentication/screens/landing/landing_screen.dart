@@ -98,7 +98,7 @@ class _LandingScreenState extends State<LandingScreen> {
                           children: [
                             Text(
                               tRegisterButton,
-                              style: Theme.of(context).textTheme.titleLarge,
+                              style: Theme.of(context).textTheme.titleLarge!.copyWith(color: Colors.white),
                             ),
                             addHorizontalSpace(10),
                             const Icon(

@@ -31,7 +31,7 @@ class AuthenticationRepository extends GetxController {
     _firebaseUser = Rx<User?>(_auth.currentUser);
     _firebaseUser.bindStream(_auth.userChanges());
     setInitialScreen(_firebaseUser.value);
-    ever(_firebaseUser, setInitialScreen);
+    // ever(_firebaseUser, setInitialScreen);
   }
 
   /// Setting initial screen
@@ -189,6 +189,7 @@ class AuthenticationRepository extends GetxController {
           );
         },
       );
+      Get.offAll(() => const LandingScreen());
     } on FirebaseAuthException catch (e) {
       final ex = Exceptions.code(e.code);
       throw ex.message;

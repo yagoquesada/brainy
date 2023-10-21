@@ -1,9 +1,12 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tfg_v3/src/common_widgets/tiles/menu_tiles.dart';
 import 'package:tfg_v3/src/features/authentication/controllers/account_controller.dart';
 import 'package:tfg_v3/src/features/settings/about_us/about_me_screen.dart';
 import 'package:tfg_v3/src/features/settings/appearance/appearance_screen.dart';
+import 'package:tfg_v3/src/utils/alert_dialog/custom_alert_dialog.dart';
 import 'package:tfg_v3/src/utils/utils.dart';
 
 class SettingTiles extends StatelessWidget {
@@ -21,7 +24,7 @@ class SettingTiles extends StatelessWidget {
           customDivider(context),
           MenuTiles(
             icon: Icons.notifications_outlined,
-            title: 'Notifications',
+            title: 'Notifications (TEST)',
             onPress: () {},
           ),
           customDivider(context),
@@ -59,11 +62,28 @@ class SettingTiles extends StatelessWidget {
             icon: Icons.logout_outlined,
             title: 'Logout',
             endIcon: false,
-            onPress: () => controller.logout(),
+            onPress: () => logOutDialog(context, controller),
           ),
           customDivider(context),
         ],
       ),
+    );
+  }
+
+  logOutDialog(context, controller) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return CustomAlertDialog(
+          title: "Log Out",
+          text: "Are you sure you want to log out from this account!",
+          icon: Icons.assistant_photo,
+          onPress: () {
+            Navigator.pop(context);
+            controller.logout();
+          },
+        );
+      },
     );
   }
 }

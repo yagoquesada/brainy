@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
@@ -31,6 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
 
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
@@ -53,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            BrainyHeader(height: height),
+            BrainyHeader(height: height, width: width),
             HistoryText(
               title: tChatHistory,
               subtitle: tAddChat,

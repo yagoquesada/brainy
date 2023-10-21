@@ -6,10 +6,11 @@ class TilesImageHistory extends StatelessWidget {
     Key? key,
     required this.url,
     required this.onPress,
+    required this.onLongPress,
   }) : super(key: key);
 
   final String url;
-  final VoidCallback onPress;
+  final VoidCallback onPress, onLongPress;
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +18,7 @@ class TilesImageHistory extends StatelessWidget {
       padding: const EdgeInsets.only(left: 5, right: 5),
       child: InkWell(
         onTap: onPress,
+        onLongPress: onLongPress,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(15.0),
           child: Image.network(
@@ -58,7 +60,7 @@ class TilesImageHistory extends StatelessWidget {
       width: 200,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        color: Theme.of(context).dialogBackgroundColor,
+        color: Theme.of(context).canvasColor,
       ),
       child: Center(
         child: CircularProgressIndicator(
