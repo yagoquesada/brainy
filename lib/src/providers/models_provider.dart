@@ -25,9 +25,4 @@ class ModelsProvider with ChangeNotifier {
   List<ModelsModel> get getModelsList {
     return modelsList;
   }
-
-  // Future<List<ModelsModel>> getAllModels() async {
-  //   modelsList = await ApiService.getModels();
-  //   return modelsList;
-  // }
 }

@@ -51,7 +51,6 @@ class ImageController extends GetxController {
           String path = '${tempDir.path}/$randomId.jpg';
 
           await Dio().download(url, path);
-          //await GallerySaver.saveImage(path, albumName: "Brainy");
 
           String uniqueFileName = DateTime.now().millisecondsSinceEpoch.toString();
 
@@ -83,7 +82,6 @@ class ImageController extends GetxController {
         true,
       );
     } catch (error) {
-      // log("error $error");
       getSnackBar(
         "Error",
         "ERROR - $error",

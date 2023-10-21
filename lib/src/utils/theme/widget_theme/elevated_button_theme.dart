@@ -15,7 +15,7 @@ final lightElevatedButtonTheme = ElevatedButtonThemeData(
     overlayColor: MaterialStateProperty.resolveWith<Color?>(
       (Set<MaterialState> states) {
         if (states.contains(MaterialState.pressed)) {
-          return Colors.transparent; //<-- SEE HERE
+          return Colors.transparent;
         }
         return null; // Defer to the widget's default.
       },
@@ -36,7 +36,7 @@ final darkElevatedButtonTheme = ElevatedButtonThemeData(
     overlayColor: MaterialStateProperty.resolveWith<Color?>(
       (Set<MaterialState> states) {
         if (states.contains(MaterialState.pressed)) {
-          return Colors.transparent; //<-- SEE HERE
+          return Colors.transparent;
         }
         return null; // Defer to the widget's default.
       },

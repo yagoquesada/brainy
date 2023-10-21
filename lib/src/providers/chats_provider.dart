@@ -42,22 +42,6 @@ class ChatProvider with ChangeNotifier {
         );
 
         for (ChatModel chatm in response) {
-          // FirebaseFirestore.instance
-          //     .collection('users')
-          //     .doc(user.uid)
-          //     .collection('chats')
-          //     .doc(chatId)
-          //     .collection('messages')
-          //     .add(
-          //   {
-          //     'text': chatm.msg,
-          //     'timestamp': DateTime.now(),
-          //     'sender': chatm.role,
-          //     'isImage': false,
-          //     'chatIndex': 1,
-          //   },
-          // );
-
           FirebaseFirestore.instance.collection('users').doc(user.uid).collection('chats').add(
             {
               'text': chatm.msg,
@@ -94,22 +78,6 @@ class ChatProvider with ChangeNotifier {
           } catch (error) {
             getSnackBar("Error", error.toString(), true);
           }
-
-          // FirebaseFirestore.instance
-          //     .collection('users')
-          //     .doc(user.uid)
-          //     .collection('chats')
-          //     .doc(chatId)
-          //     .collection('messages')
-          //     .add(
-          //   {
-          //     'text': imageUrl,
-          //     'timestamp': DateTime.now(),
-          //     'sender': chatm.role,
-          //     'isImage': true,
-          //     'chatIndex': 1,
-          //   },
-          // );
 
           FirebaseFirestore.instance.collection('users').doc(user.uid).collection('chats').add(
             {

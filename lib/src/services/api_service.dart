@@ -10,34 +10,6 @@ import 'package:tfg_v3/src/features/generators/models/chat_model.dart';
 import 'package:tfg_v3/src/utils/snack_bar/snack_bars.dart';
 
 class ApiService {
-  // * Get List of Models
-  // static Future<List<ModelsModel>> getModels() async {
-  //   try {
-  //     var response = await http.get(
-  //       Uri.parse('$BASE_URL/models'),
-  //       headers: {'Authorization': 'Bearer $API_KEY'},
-  //     );
-
-  //     Map jsonResponse = jsonDecode(response.body);
-
-  //     if (jsonResponse['error'] != null) {
-  //       // log("jsonResponse['error'] ${jsonResponse['error']["message"]}");
-  //       throw HttpException(jsonResponse['error']['message']);
-  //     }
-  //     // log("jsonResponse $jsonResponse");
-  //     List temp = [];
-
-  //     for (var value in jsonResponse['data']) {
-  //       temp.add(value);
-  //       // log("temp ${value["id"]}");
-  //     }
-  //     return ModelsModel.modelsFromSnapshot(temp);
-  //   } catch (error) {
-  //     log("error $error");
-  //     rethrow;
-  //   }
-  // }
-
   // * Send Message using ChatGPT API
   static Future<List<ChatModel>> sendMessageGPT({
     required String message,
@@ -78,7 +50,6 @@ class ApiService {
         ),
       );
 
-      // Map jsonResponse = jsonDecode(response.body);
       Map jsonResponse = json.decode(utf8.decode(response.bodyBytes));
 
       if (jsonResponse['error'] != null) {
@@ -91,7 +62,6 @@ class ApiService {
       List<ChatModel> chatList = [];
 
       if (jsonResponse["choices"].length > 0) {
-        // log(jsonResponse["choices"].toString());
         chatList = List.generate(
           jsonResponse["choices"].length,
           (index) => ChatModel(
@@ -106,7 +76,6 @@ class ApiService {
     } on SocketException catch (_) {
       rethrow;
     } catch (error) {
-      // log("error $error");
       rethrow;
     }
   }
@@ -114,7 +83,6 @@ class ApiService {
   // * Generate Image in Chat
   static Future<List<ChatModel>> getChatImage({required String imageText}) async {
     try {
-      //isLoading.value = true;
       var response = await http.post(
         Uri.parse('$baseUrl/images/generations'),
         headers: {'Authorization': 'Bearer $apiKey', 'Content-Type': "application/json"},
@@ -132,8 +100,6 @@ class ApiService {
 
       Map jsonResponse = json.decode(utf8.decode(response.bodyBytes));
 
-      // log(jsonResponse["data"][0]["url"]);
-
       if (response.statusCode == 200) {
         data.value = jsonDecode(response.body)['data'][0]['url'];
         chatList = List.generate(
@@ -147,7 +113,6 @@ class ApiService {
         );
         return chatList;
       } else {
-        // log(" JsonResponse ${jsonDecode(response.body)}");
         throw HttpException(jsonDecode(response.body));
       }
     } on SocketException catch (e) {
@@ -158,7 +123,6 @@ class ApiService {
       );
       rethrow;
     } catch (error) {
-      // log("error $error");
       getSnackBar(
         "Error",
         "ERROR - $error",
@@ -194,7 +158,6 @@ class ApiService {
         image = data.value;
         return image;
       } else {
-        // " JsonResponse ${jsonDecode(response.body)}");
         throw HttpException(jsonDecode(response.body));
       }
     } on SocketException catch (e) {
@@ -205,7 +168,6 @@ class ApiService {
       );
       rethrow;
     } catch (error) {
-      // log("error $error");
       getSnackBar(
         "Error",
         "ERROR - $error",

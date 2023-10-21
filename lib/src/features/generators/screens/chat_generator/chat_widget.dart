@@ -46,9 +46,7 @@ class ChatWidget extends StatelessWidget {
                   topRight: Radius.circular(20),
                   bottomRight: Radius.circular(20),
                 ),
-          color: chatIndex == 0
-              ? tVividSkyBlue //Theme.of(context).scaffoldBackgroundColor
-              : Theme.of(context).canvasColor,
+          color: chatIndex == 0 ? tVividSkyBlue : Theme.of(context).canvasColor,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

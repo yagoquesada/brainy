@@ -18,7 +18,7 @@ class SharedPreference {
   void setTheme(bool value) async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     preferences.setBool('isdark', value);
-    _controller.add(value); // update value here.
+    _controller.add(value);
   }
 
   Future<bool> getTheme() async {
