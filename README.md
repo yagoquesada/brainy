@@ -3,6 +3,8 @@
 
 # 🧠 Brainy App
 
+> **Chatbot** combined with **Image Generation** App, using AI 
+
 ## 📸 ScreenShots
 <p align="center">
   <img src="./assets/markdown/landing_screen.png" alt="drawing" width="300"/> <img src="./assets/markdown/home_screen_full.png" alt="drawing" width="300"/>
