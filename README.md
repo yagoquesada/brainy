@@ -1,5 +1,5 @@
 
-<img src="./assets/markdown/mockup_app.png" alt="drawing"/>
+<img src="./assets/readme/mockup_app.png" alt="drawing"/>
 
 # 🧠 Brainy App
 
@@ -7,11 +7,11 @@
 
 ## 📸 ScreenShots
 <p align="center">
-  <img src="./assets/markdown/landing_screen.png" alt="drawing" width="300"/> <img src="./assets/markdown/home_screen_full.png" alt="drawing" width="300"/>
+  <img src="./assets/readme/landing_screen.png" alt="drawing" width="300"/> <img src="./assets/readme/home_screen_full.png" alt="drawing" width="300"/>
 </p>
 
 <p align="center">
-  <img src="./assets/markdown/chat_screen_full.png" alt="drawing" width="300"/> <img src="./assets/markdown/image_generated_screen.png" alt="drawing" width="300"/>
+  <img src="./assets/readme/chat_screen_full.png" alt="drawing" width="300"/> <img src="./assets/readme/image_generated_screen.png" alt="drawing" width="300"/>
 </p>
 
 ## 📄 Description
