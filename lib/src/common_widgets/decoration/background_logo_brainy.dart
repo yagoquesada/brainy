@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tfg_v3/src/constants/string_assets.dart';
+import 'package:tfg_v3/src/utils/constants/assets_strings.dart';
 import 'dart:math' as math;
 
 class BackgroundLogoBrainy extends StatelessWidget {
@@ -18,7 +18,7 @@ class BackgroundLogoBrainy extends StatelessWidget {
           alignment: Alignment.center,
           transform: Matrix4.rotationY(math.pi),
           child: Image.asset(
-            tLogoBrainy,
+            YAssets.yLogoBrainy,
             height: 480,
             width: 480,
             fit: BoxFit.cover,

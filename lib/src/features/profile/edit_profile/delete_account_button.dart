@@ -4,10 +4,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:tfg_v3/src/features/authentication/controllers/account_controller.dart';
-import 'package:tfg_v3/src/utils/alert_dialog/custom_alert_dialog.dart';
-import 'package:tfg_v3/src/utils/alert_dialog/custom_text_field_dialog.dart';
-import 'package:tfg_v3/src/utils/snack_bar/snack_bars.dart';
+import 'package:tfg_v3/src/controllers/account_controller.dart';
+import 'package:tfg_v3/src/common_widgets/alert_dialog/custom_alert_dialog.dart';
+import 'package:tfg_v3/src/common_widgets/alert_dialog/custom_text_field_dialog.dart';
+import 'package:tfg_v3/src/common_widgets/snack_bar/snack_bars.dart';
+import 'package:tfg_v3/src/utils/constants/text_strings.dart';
+import 'package:tfg_v3/src/utils/helpers/helper_functions.dart';
 
 class DeleteAccountButton extends StatefulWidget {
   const DeleteAccountButton({
@@ -39,7 +41,7 @@ class _DeleteAccountButtonState extends State<DeleteAccountButton> {
         },
         style: ButtonStyle(
           fixedSize: MaterialStateProperty.all(
-            Size(MediaQuery.of(context).size.width * 0.7, 50),
+            Size(YHelperFunctions.screenWidth() * 0.7, 50),
           ),
           elevation: MaterialStateProperty.all(0),
           side: MaterialStateProperty.all(
@@ -55,7 +57,7 @@ class _DeleteAccountButtonState extends State<DeleteAccountButton> {
           ),
         ),
         child: Text(
-          "Delete ",
+          YTexts.tDelete,
           style: Theme.of(context).textTheme.headlineMedium!.copyWith(color: Colors.red),
         ),
       ),
@@ -67,9 +69,9 @@ class _DeleteAccountButtonState extends State<DeleteAccountButton> {
       context: context,
       builder: (BuildContext context) {
         return CustomTextFieldDialog(
-          title: "Warning",
-          text: "Are you sure you want to delete your account!",
-          labelText: "Write your password",
+          title: YTexts.tWarning,
+          text: YTexts.tDeleteAccountText,
+          labelText: YTexts.tWritePassword,
           icon: Icons.assistant_photo,
           suffixIcon: Icons.lock_outline,
           color: Colors.redAccent,
@@ -77,19 +79,19 @@ class _DeleteAccountButtonState extends State<DeleteAccountButton> {
             password = valueText;
             if (password?.isEmpty ?? true) {
               getSnackBar(
-                "Error",
-                "Password can't be empty",
+                YTexts.tError,
+                YTexts.tPasswordEmpty,
                 true,
               );
             }
             if (user.email?.isEmpty ?? true) {
               getSnackBar(
-                "Error",
-                "Problem deleting your account, please log out, and try it again",
+                YTexts.tError,
+                YTexts.tProblemDeletingAccount,
                 true,
               );
             }
-            controller.deleteAccount(user.email!, password ?? "");
+            controller.deleteAccount(user.email!, password ?? '');
           },
           onChanged: (value) => setState(() => valueText = value),
           controller: _textFieldController,
@@ -103,8 +105,8 @@ class _DeleteAccountButtonState extends State<DeleteAccountButton> {
       context: context,
       builder: (BuildContext context) {
         return CustomAlertDialog(
-          title: "Disconnect",
-          text: "Are you sure you want to disconnect your Google account!",
+          title: YTexts.tDisconnect,
+          text: YTexts.tDisconnectText,
           icon: Icons.assistant_photo,
           onPress: () => controller.disconnectGoogle(),
         );

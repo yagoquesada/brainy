@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:tfg_v3/src/constants/colors.dart';
+import 'package:tfg_v3/src/utils/constants/colors.dart';
 
 Widget addVerticalSpace(double height) {
   return SizedBox(
@@ -18,7 +18,7 @@ Widget customDivider(BuildContext context) {
   return const Padding(
     padding: EdgeInsets.symmetric(horizontal: 40),
     child: Divider(
-      color: tShadowColorDark,
+      color: YColors.tShadowColorDark,
       thickness: 1,
     ),
   );

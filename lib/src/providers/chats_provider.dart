@@ -7,9 +7,11 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 
-import 'package:tfg_v3/src/features/generators/models/chat_model.dart';
+import 'package:tfg_v3/src/models/chat_model.dart';
 import 'package:tfg_v3/src/services/api_service.dart';
-import 'package:tfg_v3/src/utils/snack_bar/snack_bars.dart';
+import 'package:tfg_v3/src/common_widgets/snack_bar/snack_bars.dart';
+import 'package:tfg_v3/src/utils/constants/enums.dart';
+import 'package:tfg_v3/src/utils/constants/text_strings.dart';
 
 class ChatProvider with ChangeNotifier {
   Future<void> sendMessageAndGetAnswers({
@@ -26,7 +28,7 @@ class ChatProvider with ChangeNotifier {
         {
           'text': msg,
           'timestamp': DateTime.now(),
-          'sender': "user",
+          'sender': ChatRole.user.name,
           'isImage': false,
           'chatIndex': 0,
           'title': title,
@@ -38,7 +40,7 @@ class ChatProvider with ChangeNotifier {
           message: msg,
           modelId: chosenModelId,
           chatsList: chatList,
-          role: "user",
+          role: ChatRole.user.name,
         );
 
         for (ChatModel chatm in response) {
@@ -57,7 +59,7 @@ class ChatProvider with ChangeNotifier {
         List<ChatModel> response = await ApiService.getChatImage(imageText: msg);
 
         for (ChatModel chatm in response) {
-          String imageUrl = "";
+          String imageUrl = '';
 
           String url = chatm.msg;
 
@@ -69,14 +71,18 @@ class ChatProvider with ChangeNotifier {
           String uniqueFileName = DateTime.now().millisecondsSinceEpoch.toString();
 
           Reference referenceRoot = FirebaseStorage.instance.ref();
-          Reference referenceDirImages = referenceRoot.child("chatImages");
+          Reference referenceDirImages = referenceRoot.child('chatImages');
           Reference referenceImageToUpload = referenceDirImages.child(uniqueFileName);
 
           try {
             await referenceImageToUpload.putFile(File(path));
             imageUrl = await referenceImageToUpload.getDownloadURL();
           } catch (error) {
-            getSnackBar("Error", error.toString(), true);
+            getSnackBar(
+              YTexts.tError,
+              error.toString(),
+              true,
+            );
           }
 
           FirebaseFirestore.instance.collection('users').doc(user.uid).collection('chats').add(

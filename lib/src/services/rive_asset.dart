@@ -19,36 +19,36 @@ class RiveAsset {
 
 List<RiveAsset> sideMenus = [
   RiveAsset(
-    "assets/rive/icons.riv",
-    artboard: "HOME",
-    stateMachineName: "HOME_interactivity",
-    title: "Home",
+    'assets/rive/icons.riv',
+    artboard: 'HOME',
+    stateMachineName: 'HOME_interactivity',
+    title: 'Home',
   ),
   RiveAsset(
-    "assets/rive/icons.riv",
-    artboard: "USER",
-    stateMachineName: "USER_Interactivity",
-    title: "User",
+    'assets/rive/icons.riv',
+    artboard: 'USER',
+    stateMachineName: 'USER_Interactivity',
+    title: 'User',
   ),
   RiveAsset(
-    "assets/rive/icons.riv",
-    artboard: "SETTINGS",
-    stateMachineName: "SETTINGS_Interactivity",
-    title: "Settings",
+    'assets/rive/icons.riv',
+    artboard: 'SETTINGS',
+    stateMachineName: 'SETTINGS_Interactivity',
+    title: 'Settings',
   ),
 ];
 
 List<RiveAsset> sideMenu2 = [
   RiveAsset(
-    "assets/rive/icons.riv",
-    artboard: "CHAT",
-    stateMachineName: "CHAT_Interactivity",
-    title: "Chat Generator",
+    'assets/rive/icons.riv',
+    artboard: 'CHAT',
+    stateMachineName: 'CHAT_Interactivity',
+    title: 'Chat Generator',
   ),
   RiveAsset(
-    "assets/rive/icons.riv",
-    artboard: "REFRESH/RELOAD",
-    stateMachineName: "RELOAD_Interactivity",
-    title: "Image Generator",
+    'assets/rive/icons.riv',
+    artboard: 'REFRESH/RELOAD',
+    stateMachineName: 'RELOAD_Interactivity',
+    title: 'Image Generator',
   ),
 ];

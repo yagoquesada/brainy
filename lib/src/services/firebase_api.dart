@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:tfg_v3/src/features/generators/models/chat_model.dart';
+import 'package:tfg_v3/src/models/chat_model.dart';
 
 class FirebaseApi {
   static Future uploadMessage(
@@ -8,7 +8,7 @@ class FirebaseApi {
     String msg,
     bool isImage,
   ) async {
-    final refMessages = FirebaseFirestore.instance.collection("chats/$role/messages");
+    final refMessages = FirebaseFirestore.instance.collection('chats/$role/messages');
 
     final newMessage = ChatModel(
       role: role,

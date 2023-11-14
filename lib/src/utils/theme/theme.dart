@@ -2,13 +2,13 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:tfg_v3/src/constants/colors.dart';
+import 'package:tfg_v3/src/utils/constants/colors.dart';
 import 'package:tfg_v3/src/utils/theme/widget_theme/app_bar_theme.dart';
 import 'package:tfg_v3/src/utils/theme/widget_theme/elevated_button_theme.dart';
 import 'package:tfg_v3/src/utils/theme/widget_theme/text_field_theme.dart';
 import 'package:tfg_v3/src/utils/theme/widget_theme/text_theme.dart';
 
-class SharedPreference {
+class YSharedPreference {
   final _controller = StreamController<bool>();
 
   Stream<bool> get darkMode async* {
@@ -42,44 +42,45 @@ IconData iconDark = Icons.nights_stay;
 
 /* -- Theme LightMode -- */
 ThemeData lightTheme = ThemeData(
-  appBarTheme: appBarLightTheme,
-  cardColor: tCardColorLight,
-  scaffoldBackgroundColor: tScaffoldBackgroundColorLight,
-  colorSchemeSeed: tBackgroundColorLight,
-  dialogBackgroundColor: tScaffoldBackgroundColorLightSettings,
+  appBarTheme: YAppBarTheme.appBarLightTheme,
+  cardColor: YColors.tCardColorLight,
+  scaffoldBackgroundColor: YColors.tScaffoldBackgroundColorLight,
+  colorSchemeSeed: YColors.tBackgroundColorLight,
+  dialogBackgroundColor: YColors.tScaffoldBackgroundColorLightSettings,
   unselectedWidgetColor: Colors.black,
-  shadowColor: tShadowColorLight,
-  hoverColor: tMenuBackgroundColorLight,
-  canvasColor: tMessageColorLight,
+  shadowColor: YColors.tShadowColorLight,
+  hoverColor: YColors.tMenuBackgroundColorLight,
+  canvasColor: YColors.tMessageColorLight,
   textTheme: lightTextTheme,
-  elevatedButtonTheme: lightElevatedButtonTheme,
+  elevatedButtonTheme: YElevatedButtonTheme.lightElevatedButtonTheme,
   inputDecorationTheme: lightInputDecorationTheme,
   brightness: Brightness.light,
 );
 
 /* -- Theme DarkMode -- */
 ThemeData darkTheme = ThemeData(
-  appBarTheme: appBarDarkTheme,
-  cardColor: tCardColorDark,
-  scaffoldBackgroundColor: tScaffoldBackgroundColorDark,
-  colorSchemeSeed: tBackgroundColorDark,
-  dialogBackgroundColor: tScaffoldBackgroundColorDarkSettings,
+  appBarTheme: YAppBarTheme.appBarDarkTheme,
+  cardColor: YColors.tCardColorDark,
+  scaffoldBackgroundColor: YColors.tScaffoldBackgroundColorDark,
+  colorSchemeSeed: YColors.tBackgroundColorDark,
+  dialogBackgroundColor: YColors.tScaffoldBackgroundColorDarkSettings,
   unselectedWidgetColor: Colors.white,
-  shadowColor: tShadowColorDark,
-  hoverColor: tMenuBackgroundColorDark,
-  canvasColor: tMessageColorDark,
+  shadowColor: YColors.tShadowColorDark,
+  hoverColor: YColors.tMenuBackgroundColorDark,
+  canvasColor: YColors.tMessageColorDark,
   textTheme: darkTextTheme,
-  elevatedButtonTheme: darkElevatedButtonTheme,
+  elevatedButtonTheme: YElevatedButtonTheme.darkElevatedButtonTheme,
   inputDecorationTheme: darkInputDecorationTheme,
   brightness: Brightness.dark,
 );
+
 
 
 /* 
 colorScheme: ThemeData()
       .colorScheme
       .copyWith(
-        primary: tVividSkyBlue,
+        primary: TColors.primary,
         brightness: Brightness.dark,
       )
       .copyWith(background: tBackgroundColorDark), 

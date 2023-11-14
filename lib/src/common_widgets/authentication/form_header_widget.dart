@@ -26,7 +26,6 @@ class FormHeaderWidget extends StatelessWidget {
           style: Theme.of(context).textTheme.headlineMedium,
           textAlign: TextAlign.center,
         ),
-        addVerticalSpace(50),
       ],
     );
   }

@@ -1,4 +1,0 @@
-enum ResponseType {
-  user,
-  assistant,
-}

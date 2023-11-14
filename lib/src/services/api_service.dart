@@ -1,13 +1,14 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
-import 'package:tfg_v3/src/constants/api_constants.dart';
-import 'package:tfg_v3/src/constants/constants.dart';
-import 'package:tfg_v3/src/features/generators/models/chat_model.dart';
-import 'package:tfg_v3/src/utils/snack_bar/snack_bars.dart';
+import 'package:tfg_v3/src/models/chat_model.dart';
+import 'package:tfg_v3/src/utils/constants/enums.dart';
+import 'package:tfg_v3/src/common_widgets/snack_bar/snack_bars.dart';
+import 'package:tfg_v3/src/utils/constants/text_strings.dart';
 
 class ApiService {
   // * Send Message using ChatGPT API
@@ -19,6 +20,8 @@ class ApiService {
   }) async {
     try {
       final memChats = List<Map<String, String>>.empty(growable: true);
+      String baseUrl = dotenv.get('BASE_URL', fallback: '');
+      String apiKey = dotenv.get('API_KEY', fallback: '');
 
       if (chatsList != null) {
         // add all previous chats for model to process (consumes tokens)
@@ -41,7 +44,7 @@ class ApiService {
 
       var response = await http.post(
         Uri.parse('$baseUrl/chat/completions'),
-        headers: {'Authorization': 'Bearer $apiKey', 'Content-Type': "application/json"},
+        headers: {'Authorization': 'Bearer $apiKey', 'Content-Type': 'application/json'},
         body: jsonEncode(
           {
             'model': modelId,
@@ -56,18 +59,18 @@ class ApiService {
         if (jsonResponse['error']['code'] == 'context_length_exceeded') {
           throw const HttpException('max_length');
         }
-        throw HttpException(jsonResponse['error']["message"]);
+        throw HttpException(jsonResponse['error']['message']);
       }
 
       List<ChatModel> chatList = [];
 
-      if (jsonResponse["choices"].length > 0) {
+      if (jsonResponse['choices'].length > 0) {
         chatList = List.generate(
-          jsonResponse["choices"].length,
+          jsonResponse['choices'].length,
           (index) => ChatModel(
-            msg: jsonResponse["choices"][index]["message"]["content"],
+            msg: jsonResponse['choices'][index]['message']['content'],
             chatIndex: 1,
-            role: ResponseType.assistant.name,
+            role: ChatRole.assistant.name,
             isImage: false,
           ),
         );
@@ -83,9 +86,12 @@ class ApiService {
   // * Generate Image in Chat
   static Future<List<ChatModel>> getChatImage({required String imageText}) async {
     try {
+      String baseUrl = dotenv.get('BASE_URL', fallback: '');
+      String apiKey = dotenv.get('API_KEY', fallback: '');
+
       var response = await http.post(
         Uri.parse('$baseUrl/images/generations'),
-        headers: {'Authorization': 'Bearer $apiKey', 'Content-Type': "application/json"},
+        headers: {'Authorization': 'Bearer $apiKey', 'Content-Type': 'application/json'},
         body: jsonEncode(
           {
             'prompt': imageText,
@@ -103,11 +109,11 @@ class ApiService {
       if (response.statusCode == 200) {
         data.value = jsonDecode(response.body)['data'][0]['url'];
         chatList = List.generate(
-          jsonResponse["data"].length,
+          jsonResponse['data'].length,
           (index) => ChatModel(
             msg: data.value,
             chatIndex: 1,
-            role: ResponseType.assistant.name,
+            role: ChatRole.assistant.name,
             isImage: true,
           ),
         );
@@ -117,15 +123,15 @@ class ApiService {
       }
     } on SocketException catch (e) {
       getSnackBar(
-        "Error",
+        YTexts.tError,
         e.message,
         true,
       );
       rethrow;
     } catch (error) {
       getSnackBar(
-        "Error",
-        "ERROR - $error",
+        YTexts.tError,
+        error.toString(),
         true,
       );
       rethrow;
@@ -137,10 +143,12 @@ class ApiService {
 
     try {
       isLoading.value = true;
+      String baseUrl = dotenv.get('BASE_URL', fallback: '');
+      String apiKey = dotenv.get('API_KEY', fallback: '');
 
       var response = await http.post(
         Uri.parse('$baseUrl/images/generations'),
-        headers: {'Authorization': 'Bearer $apiKey', 'Content-Type': "application/json"},
+        headers: {'Authorization': 'Bearer $apiKey', 'Content-Type': 'application/json'},
         body: jsonEncode(
           {
             'prompt': imageText,
@@ -151,7 +159,7 @@ class ApiService {
       );
 
       final data = ''.obs;
-      String image = "";
+      String image = '';
 
       if (response.statusCode == 200) {
         data.value = jsonDecode(response.body)['data'][0]['url'];
@@ -162,15 +170,15 @@ class ApiService {
       }
     } on SocketException catch (e) {
       getSnackBar(
-        "Error",
+        YTexts.tError,
         e.message,
         true,
       );
       rethrow;
     } catch (error) {
       getSnackBar(
-        "Error",
-        "ERROR - $error",
+        YTexts.tError,
+        error.toString(),
         true,
       );
       rethrow;

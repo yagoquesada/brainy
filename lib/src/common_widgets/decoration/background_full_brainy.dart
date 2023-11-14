@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tfg_v3/src/constants/string_assets.dart';
+import 'package:tfg_v3/src/utils/constants/assets_strings.dart';
 
 class BackgroundFullBrainy extends StatelessWidget {
   const BackgroundFullBrainy({
@@ -12,7 +12,7 @@ class BackgroundFullBrainy extends StatelessWidget {
       right: -50,
       top: 300,
       child: Image.asset(
-        tFullBrainy,
+        YAssets.yFullBrainy,
         height: 800,
         width: 800,
         fit: BoxFit.cover,

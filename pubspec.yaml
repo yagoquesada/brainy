@@ -48,15 +48,30 @@ dependencies:
   chat_bubbles: ^1.4.1
   rive: ^0.11.4
 
-  # Others
-  get: ^4.6.5
-  http: ^0.13.5
-  gallery_saver: ^2.3.2
-  dio: ^5.2.0+1
+  # Authentification
   email_validator: ^2.1.17
   google_sign_in: ^6.1.4
-  shared_preferences: ^2.2.0
+
+  # PERFORMANCE, PRODUCTIVITY & ORGANIZATION 
+  get: ^4.6.5
+
+  # HTTP requests
+  http: ^0.13.5
+  dio: ^5.2.0+1 #! download images
+
+  # Save to gallery 
+  gallery_saver: ^2.3.2
+
+  # Validate if dependency are used
   dependency_validator: ^3.2.2
+  
+  # Save data locally
+  shared_preferences: ^2.2.0
+  flutter_dotenv: ^5.1.0
+
+  url_launcher: ^6.2.1
+  intl: ^0.18.1
+  
 
 dev_dependencies:
   # The "flutter_lints" package below contains a set of recommended lints to
@@ -90,6 +105,7 @@ flutter:
     - assets/logo/
     - assets/rive/
     - assets/svg/
+    - .env
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

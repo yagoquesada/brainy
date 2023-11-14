@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 
-import 'package:tfg_v3/src/features/generators/models/models_model.dart';
+import 'package:tfg_v3/src/models/models_model.dart';
 
 class ModelsProvider with ChangeNotifier {
-  String currentModel = "gpt-4";
+  String currentModel = 'gpt-4';
   bool hasMemory = true;
 
   List<ModelsModel> modelsList = [];

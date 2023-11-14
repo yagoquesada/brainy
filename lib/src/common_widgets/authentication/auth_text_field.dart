@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tfg_v3/src/constants/colors.dart';
+import 'package:tfg_v3/src/utils/constants/colors.dart';
+import 'package:tfg_v3/src/utils/constants/text_strings.dart';
 
 class AuthTextField extends StatefulWidget {
   const AuthTextField({
@@ -36,16 +37,16 @@ class _AuthTextFieldState extends State<AuthTextField> {
         ),
         focusedBorder: const OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(20)),
-          borderSide: BorderSide(width: 2, color: tVividSkyBlue),
+          borderSide: BorderSide(width: 2, color: YColors.primary),
         ),
         filled: true,
         fillColor: Theme.of(context).cardColor,
         prefixIcon: Icon(widget.prefixIcon),
         prefixIconColor: MaterialStateColor.resolveWith(
-            (states) => states.contains(MaterialState.focused) ? tVividSkyBlue : Colors.grey),
+            (states) => states.contains(MaterialState.focused) ? YColors.primary : Colors.grey),
         hintText: widget.hintText,
         labelText: widget.hintText,
-        suffixIcon: widget.hintText == "Password"
+        suffixIcon: widget.hintText == YTexts.tPassword
             ? IconButton(
                 onPressed: () => setState(() => passToggle = !passToggle),
                 icon: Icon(
@@ -54,10 +55,10 @@ class _AuthTextFieldState extends State<AuthTextField> {
               )
             : null,
         suffixIconColor: MaterialStateColor.resolveWith(
-            (states) => states.contains(MaterialState.focused) ? tVividSkyBlue : Colors.grey),
+            (states) => states.contains(MaterialState.focused) ? YColors.primary : Colors.grey),
         errorStyle: const TextStyle(fontSize: 16),
       ),
-      obscureText: widget.hintText == "Password"
+      obscureText: widget.hintText == YTexts.tPassword
           ? passToggle
               ? true
               : false
