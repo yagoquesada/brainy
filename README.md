@@ -3,6 +3,8 @@
 
 # 🧠 Brainy App
 
+> Introducing *Brainy*, the innovative app powered by GPT-4 for intelligent Chatbot conversations and DALL-E 2 for stunning Image Generation.
+
 ## 📸 ScreenShots
 <p align="center">
   <img src="./assets/markdown/landing_screen.png" alt="drawing" width="300"/> <img src="./assets/markdown/home_screen_full.png" alt="drawing" width="300"/>
