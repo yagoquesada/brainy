@@ -320,6 +320,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  freezed_annotation:
+    dependency: transitive
+    description:
+      name: freezed_annotation
+      sha256: c3fd9336eb55a38cc1bbd79ab17573113a8deccd0ecbbf926cca3c62803b5c2d
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.1"
   gallery_saver:
     dependency: "direct main"
     description:
@@ -472,6 +480,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  logger:
+    dependency: transitive
+    description:
+      name: logger
+      sha256: "6bbb9d6f7056729537a4309bda2e74e18e5d9f14302489cc1e93f33b3fe32cac"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.2+1"
   logging:
     dependency: transitive
     description:
@@ -640,6 +656,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.3"
+  purchases_flutter:
+    dependency: "direct main"
+    description:
+      name: purchases_flutter
+      sha256: d7b830b637da01c586076b2acd463d7e96e594f40c96615616d2b8306b07dd90
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.4.0"
   quiver:
     dependency: transitive
     description:
@@ -648,6 +672,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.2.1"
+  rename:
+    dependency: "direct main"
+    description:
+      name: rename
+      sha256: "4d08eafe78e0787167c2fcdd5e32bbb0a6b2d8a7d23b38280f590df2a051415c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.1"
   rive:
     dependency: "direct main"
     description:
