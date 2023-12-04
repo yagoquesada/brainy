@@ -10,7 +10,7 @@ class YAppBarTheme {
     toolbarHeight: 70,
     elevation: 2,
     centerTitle: true,
-    color: YColors.tCardColorLight,
+    color: YColors.cardColorLight,
     titleTextStyle: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.w600),
   );
 
@@ -19,7 +19,7 @@ class YAppBarTheme {
     toolbarHeight: 70,
     elevation: 2,
     centerTitle: true,
-    color: YColors.tCardColorDark,
+    color: YColors.cardColorDark,
     titleTextStyle: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w600),
   );
 }

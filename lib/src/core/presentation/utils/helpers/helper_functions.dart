@@ -136,7 +136,7 @@ class YHelperFunctions {
     return const Padding(
       padding: EdgeInsets.symmetric(horizontal: 40),
       child: Divider(
-        color: YColors.tShadowColorDark,
+        color: YColors.shadowColorDark,
         thickness: 1,
       ),
     );

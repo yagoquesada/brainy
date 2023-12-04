@@ -34,9 +34,9 @@ class _ImageGeneratorScreenState extends State<ImageGeneratorScreen> {
   @override
   void initState() {
     _textEditingController = TextEditingController();
-    _itemStatusStyle = YBools.tItemStatusStyle;
+    _itemStatusStyle = YBools.itemStatusStyle;
     _itemTypesStyle = YTexts.itemTypesStyle;
-    _itemStatusColors = YBools.tItemStatusColors;
+    _itemStatusColors = YBools.itemStatusColors;
     _itemTypesColors = YTexts.itemTypesColors;
     super.initState();
   }

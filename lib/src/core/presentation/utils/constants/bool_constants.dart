@@ -1,5 +1,5 @@
 class YBools {
-  static List<bool> tItemStatusStyle = [
+  static List<bool> itemStatusStyle = [
     false,
     false,
     false,
@@ -58,7 +58,7 @@ class YBools {
     false,
   ];
 
-  static List<bool> tItemStatusColors = [
+  static List<bool> itemStatusColors = [
     false,
     false,
     false,
