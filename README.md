@@ -23,6 +23,51 @@ Brainy is an innovative application that seamlessly integrates two powerful feat
 - **Image Generation:**
   Alongside its exceptional chatbot capabilities, Brainy incorporates an image generator that taps into the OpenAI API. Generate stunning and diverse images based on various inputs, adding an artistic touch to your interactions.
 
+## ✅ Getting Started 
+
+### Prerequisites
+
+Software that users need to have installed before they can use your project.
+
+- Flutter: [Installation Guide](https://flutter.dev/docs/get-started/install)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yagoquesada/brainy.git
+2. Change to the project directory
+   ```bash
+   cd your-project
+3. Install dependencies
+   ```bash
+   flutter pub get
+   
+## Usage
+
+Create a .env file in the project directory. Inside paste the following code:
+
+  ```bash
+  OPENAI_API_KEY = YOUR_API_KEY
+  OPENAI_BASE_URL = https://api.openai.com/v1
+  OPENAI_MODEL = gpt-4
+  ```
+
+> [!IMPORTANT]
+> Change *YOUR_API_KEY* for your own OpenAI API key. Follow the instructions below to get your key and understand how to work with the OpenAI API.
+> 
+> [Quickstart Tutorial - OpenAI API](https://platform.openai.com/docs/quickstart?context=python)
+
+> [!WARNING]
+> OpenAI has different tiers, as your usage of the OpenAI API and your spend on the API goes up, they automatically graduate you to the next usage tier. So depending on the tier you might have errors when reaching the rate limit. For more information about rate limits and OpenAI tiers, read the following documentation:
+> 
+> [Rate limits - OpenAI API](https://platform.openai.com/docs/guides/rate-limits)  
+
+Then you are ready to run it!
+  ```bash
+  flutter run
+  ```
+
 ## ⚙️ Features
 - Chatbot using GPT-4:
   - Utilizes GPT-4 model through OpenAI API to provide conversational capabilities.
