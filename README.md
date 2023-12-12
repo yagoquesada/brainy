@@ -156,7 +156,6 @@ Don't forget to give the project a star! Thanks again!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ✉️ Contact
-For any inquiries or support, please contact us at brainycontactmail@gmail.com.
 
 Your Name - [@instagram](https://www.instagram.com/yagoquesada/) - yagoquesada2001@gmail.com
 
